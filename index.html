@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+  <title>Document</title>
+</head>
+<style>
+  #header{
+    background-color: aquamarine;
+  }
+  /*.floating-bg {
+  width: 150vw;
+  height: 150vw;
+  background-color: rgba(50, 231, 255, 0.8);
+  position: absolute;
+  top: -125vw;
+  left: calc(50% - 75vw);
+  border-radius: 45%;
+  animation: rotate 30s infinite;
+}
+
+.floating-bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 231, 255, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 40%;
+  animation: rotate 30s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+}
+.navbar {
+  position: relative;
+  z-index: 20;
+  top: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar-link {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  width: 1.5rem;
+  word-wrap: break-word;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.navbar-link:hover {
+  width: 15rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 2.5s;
+}
+
+.section-1-heading {
+  font-size: 8rem;
+  font-family: "Monoton", cursive;
+  position: absolute;
+  top: 18vw;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0.3rem 0.3rem 0.3rem #888;
+  color: #fff;
+  background-color: #fff;
+  width: 85rem;
+  text-align: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+  opacity: 0.9;
+}
+
+.logo {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo i {
+  font-size: 15rem;
+  color: rgba(50, 231, 255, 0.8);
+  text-shadow: 0.1rem 0.1rem 0.2rem #ddd, -0.1rem -0.1rem 0.2rem #ddd;
+}*/
+.section-3 {
+  background-color:aquamarine;
+  padding: 5rem 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+.gallery-link {
+  position: relative;
+  margin: 4rem 1rem;
+}
+
+.gallery-link::before {
+  content: "";
+  position: absolute;
+  top: 2vw;
+  left: 80%;
+  width: 0.2rem;
+  height: 0;
+  background-color: #fff;
+  z-index: 10;
+  transition: height 0.5s;
+}
+
+.gallery-link::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 2rem;
+  width: 0;
+  height: 0.2rem;
+  background-color: #fff;
+  transition: width 0.5s;
+}
+
+.gallery-link:hover::before {
+  height: 80%;
+}
+
+.gallery-link:hover::after {
+  width: 90%;
+}
+
+.food-img {
+  width: 24vw;
+  height: 15vw;
+  object-fit: cover;
+  box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #a2e946,
+    0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+  transition: all 0.5s;
+}
+
+.gallery-link:hover .food-img {
+  box-shadow: 1rem 1rem 0.1rem #e92929, 1.5rem 1.5rem 0.1rem #a2e946,
+    2rem 2rem 0.1rem #297ce9, 3rem 3rem 0.1rem #e92999;
+  transform: scale(1.1);
+  filter: blur(0.7rem);
+  opacity: 0.5;
+}
+
+.food-name {
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.gallery-link:hover .food-name {
+  width: 100%;
+  transition: width 1.5s 0.5s;
+}
+
+.food-description {
+  position: absolute;
+  bottom: 3vw;
+  left: 2rem;
+  width: 70%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.gallery-link:hover .food-description {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s 1s;
+}
+.section-heading {
+  font-size: 10rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+#container {
+  font-size: 7rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+
+.section-section-testimonial
+{
+  background-color:aquamarine;
+}
+/*.review .slide{
+    padding:2rem;
+    box-shadow:var(--box-shadow);
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    position: relative;    
+}
+
+.review .slide .fa-quote-right{
+    position: absolute;
+    top:2rem; right:2rem;
+    font-size: 6rem;
+    color:#ccc;
+}
+
+.review .slide .user{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.review .slide .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .slide .user h3{
+    color:var(--black);
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+.review .slide .user i{
+    font-size: 1.3rem;
+    color:var(--green);
+}
+
+.review .slide p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:var(--light-color);
+}
+.sub-heading{
+    text-align: center;
+    color:var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading{
+    text-align: center;
+    color:var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}*/
+.swiper {
+        width: 50%;
+        height: 50%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background:white;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .swiper-client-msg{
+        padding: 5rem 5rem;
+        background:var(--white);
+        border-radius: 1rem;
+        text-align: left;
+        box-shadow: var(--shadow);
+        position: relative;
+      }
+      .swiper-client-msg h4{
+        font-weight: 800;
+        font-style: italic;
+      }
+      .swiper-slide img{
+        max-width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        border: 0.5rem solid var(--helper-tint);
+      }
+
+      .swiper-client-msg::before{
+        content:"";
+        position: absolute;
+        bottom: -10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 5rem solid var(--white);
+        border-color: transparent;
+        border-top-color: var(--helper-tint);
+      }
+
+      .swiper-client-data{
+        align-items: center;
+        margin-top: 3.2rem;
+        gap: 3.2rem;
+      }
+
+      .swiper-client-msg p::before{
+        content: "\f10d";
+        position:absolute;
+        top: 0;
+        left:2rem;
+        font-size: 5rem;
+        color: #ced3ff;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+      }
+
+      .swiper-client-msg p::after{
+        content: "\f10e";
+        position:absolute;
+        bottom: 0;
+        right:2rem;
+        font-size: 5rem;
+        color: #ced3ff;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+      }
+
+      /* Responsive */
+@media (max-width: 1400px) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-2 {
+    height: auto;
+  }
+
+  .cards-container {
+    margin-top: 10rem;
+  }
+
+  .gallery-link {
+    width: 40rem;
+    height: 25rem;
+    margin: 5rem;
+  }
+
+  .food-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-heading {
+    font-size: 9rem;
+    margin: 0 5rem;
+  }
+
+  .section-1-icons i {
+    font-size: 25rem;
+  }
+
+  .cards-container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 5rem;
+  }
+
+  .section-4 {
+    height: 30rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-link {
+    margin: 2rem;
+  }
+
+  .navbar-link i {
+    font-size: 4rem;
+  }
+
+  .navbar-link span {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-heading {
+    font-size: 7rem;
+    margin: 0 10rem;
+  }
+
+  .section-1-icons i {
+    font-size: 20rem;
+  }
+
+  .menu {
+    left: 2rem;
+  }
+
+  .section-4 {
+    height: 40rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .section-4-text {
+    margin-bottom: 8rem;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 40%;
+  }
+
+  .navbar-link {
+    margin: 0 0.7rem;
+  }
+}
+/* End of Responsive */
+
+.swiper-button-next{
+    color: #444;
+}
+
+.swiper-button-prev{
+    color: #444;
+}
+#introduction{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+</style>
+<body>
+  <header class="text-gray-600 body-font" id="header">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>-->
+        <img src="images/NSEC cafeteria and canteen logo (1).jpeg">
+        <span class="ml-3 text-xl">NSEC CAFETERIA AND CANTEEN</span>
+      </a>
+      <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900" href="http://127.0.0.1:5500/website1/website1/About%20Us.html">About Us</a>
+        <a class="mr-5 hover:text-gray-900" href="http://127.0.0.1:5500/website1/website1/Contact%20Us.html">Contact Us</a>
+      </nav>
+      <!--<button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>-->
+    </div>
+  </header>
+  <hr>
+  <!--<div class="container">
+     Section 1 
+    <section class="section-1" id="home">
+        <nav class="navbar">
+            <a href="#home" class="navbar-link">Design</a>
+            <a href="#customers" class="navbar-link">Customers</a>
+            <a href="#team" class="navbar-link">Team</a>
+            <a href="#contact" class="navbar-link">Contact</a>
+        </nav>
+        <div class="floating-bg"></div>
+        <h1 class="section-1-heading">Creative Design</h1>
+        <div class="logo">
+            <i class="fas fa-bezier-curve"></i>
+        </div>
+    </section>-->
+  <section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+        <img class="object-cover object-center rounded" alt="hero" src="https://source.unsplash.com/720x600/?food">
+      </div>
+      <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" id="introduction">EAT DELICIOUS SCRUMPTIOUS TASTY FLAVOURFUL FOOD
+          <br class="hidden lg:inline-block">
+        </h1>
+        <p class="mb-8 leading-relaxed">"Never underestimate the power of good food, Eating delicious food can be a life changing experience"</p>
+        <!--<div class="flex justify-center">
+          <button class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Button</button>
+          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+        </div>-->
+      </div>
+    </div>
+  </section>
+  <hr>
+  <!--<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a>
+            <a href="http://127.0.0.1:5500/biryani.html"><img alt="ecommerce" src="biryani (1).jpg"></a>
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">The Biryani</h2>
+            <p class="mt-1">₹120.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+            <p class="mt-1">$21.15</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/422x262">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+            <p class="mt-1">$12.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+            <p class="mt-1">$18.40</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/424x264">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+            <p class="mt-1">$16.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/425x265">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+            <p class="mt-1">$21.15</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/427x267">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+            <p class="mt-1">$12.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+            <p class="mt-1">$18.40</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+            <p class="mt-1">$16.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+            <p class="mt-1">$21.15</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/422x262">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+            <p class="mt-1">$12.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+            <p class="mt-1">$18.40</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/424x264">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+            <p class="mt-1">$16.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/425x265">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Shooting Stars</h2>
+            <p class="mt-1">$21.15</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/427x267">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">Neptune</h2>
+            <p class="mt-1">$12.00</p>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <a class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
+          </a>
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900 title-font text-lg font-medium">The 400 Blows</h2>
+            <p class="mt-1">$18.40</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>-->
+  <section class="section-3">
+    <h1 class="section-heading">MENU</h1>
+    <div class="gallery">
+        <a href="http://127.0.0.1:5500/website1/website1/biryani.html" class="gallery-link" title="Order Now">
+            <img src="images/biryani (1) new.jpg" class="food-img" />
+            <h3 class="food-name">Biryani</h3>
+            <!--<p class="food-description">
+                Lorem ipsum 
+            </p>-->
+        </a>
+        <a href="http://127.0.0.1:5500/website1/website1/momo.html" class="gallery-link" title="Order Now">
+            <img src="images/MOMO.jpg" class="food-img" />
+            <h3 class="food-name">MOMO</h3>
+            <!--<p class="food-description">
+                Lorem ipsum 
+            </p>-->
+        </a>
+        <a href="http://127.0.0.1:5500/website1/website1/sandwich.html" class="gallery-link" title="Order Now">
+            <img src="images/Sandwich.jpg" class="food-img" />
+            <h3 class="food-name">Sandwich</h3>
+            <!--<p class="food-description">
+                Lorem 
+            </p>-->
+        </a>
+        <a href="http://127.0.0.1:5500/website1/website1/burger.html" class="gallery-link" title="Order Now">
+            <img src="images/gallery-img-4.jpg" class="food-img" />
+            <h3 class="food-name">Burger</h3>
+            <!--<p class="food-description">
+                Lorem 
+            </p>-->
+        </a>
+        <a href="http://127.0.0.1:5500/website1/website1/Cutlet.html" class="gallery-link" title="Order Now">
+            <img src="images/Chicken Cutlet.jpg" class="food-img" />
+            <h3 class="food-name">Cutlet</h3>
+            <!--<p class="food-description">
+                Lorem ipsum 
+               
+            </p>-->
+        </a>
+        <a href="http://127.0.0.1:5500/website1/website1/hotdog.html" class="gallery-link" title="Order Now">
+            <img src="images/Hotdog.jpg" class="food-img" />
+            <h3 class="food-name">Hotdog</h3>
+            <!--<p class="food-description">
+                Lorem ipsum
+            </p>-->
+        </a>
+
+        
+    
+    </div>
+</section>
+<!-- review section starts  -->
+
+<!--<section class="review" id="review">
+
+  <h3 class="sub-heading"> customer's review </h3>
+  <h1 class="heading"> what they say </h1>
+
+  <div class="swiper-container review-slider">
+
+      <div class="swiper-wrapper">
+
+          <div class="swiper-slide slide">
+              <i class="fas fa-quote-right"></i>
+              <div class="user">
+                  <img src="images/pic-1.png" alt="">
+                  <div class="user-info">
+                      <h3>john deo</h3>
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                  </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam. Ipsum, magni.</p>
+          </div>
+
+          <div class="swiper-slide slide">
+              <i class="fas fa-quote-right"></i>
+              <div class="user">
+                  <img src="images/pic-2.png" alt="">
+                  <div class="user-info">
+                      <h3>john deo</h3>
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                  </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam. Ipsum, magni.</p>
+          </div>
+
+          <div class="swiper-slide slide">
+              <i class="fas fa-quote-right"></i>
+              <div class="user">
+                  <img src="images/pic-3.png" alt="">
+                  <div class="user-info">
+                      <h3>john deo</h3>
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                  </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam. Ipsum, magni.</p>
+          </div>
+
+          <div class="swiper-slide slide">
+              <i class="fas fa-quote-right"></i>
+              <div class="user">
+                  <img src="images/pic-4.png" alt="">
+                  <div class="user-info">
+                      <h3>john deo</h3>
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                  </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat consequuntur repellendus aperiam deserunt nihil, corporis fugit voluptatibus voluptate totam neque illo placeat eius quis laborum aspernatur quibusdam. Ipsum, magni.</p>
+          </div>
+
+      </div>
+
+  </div>
+  
+</section>-->
+<br>
+<hr>
+<!-- review section ends -->
+<section class="section-section-testimonial">
+  <div id =container>
+    <h2 class="common heading">Happy Clients</h2>
+  </div>
+<!-- Swiper -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="swiper-client-msg">
+        <h4>Worth Every Single Penny</h4>
+        <p>The best Biryani in college canteen(NSEC).Rates are very reasonable and the biryani is just really yummy.You have to wait a little bit but the wait is totally worth it.</p>
+      </div>
+      <div class="swiper-client-data grid grid-two-column">
+        <figure>
+          <img src="images/pic-5.jpg">
+        </figure>
+        <div class="client-data-details">
+          <p>Harry Hoffmann</p>
+          <p>Enterpreneur</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="swiper-client-msg">
+        <h4>Taste of Tibet</h4>
+        <p>Mouthwatering delicious momos are just awesome.Lots of spices and vegetables are stuffed inside a thin coating.Perfect combination with the chutney in a very cheap price.</p>
+      </div>
+      <div class="swiper-client-data grid grid-two-column">
+        <figure>
+          <img src="images/pic-1.png">
+        </figure>
+        <div class="client-data-details">
+          <p>Tim Hoffmann</p>
+          <p>Enterpreneur</p>
+        </div>
+      </div>
+    </div>
+    <!--<div class="swiper-slide">
+      <div class="swiper-client-msg">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="swiper-client-data grid grid-two-column">
+        <figure>
+          <img src="images/pic-1.png">
+        </figure>
+        <div class="client-data-details">
+          <p>Vinod Thapa</p>
+          <p>Enterpreneur</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="swiper-client-msg">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="swiper-client-data grid grid-two-column">
+        <figure>
+          <img src="images/pic-1.png">
+        </figure>
+        <div class="client-data-details">
+          <p>Vinod Thapa</p>
+          <p>Enterpreneur</p>
+        </div>
+      </div>
+    </div>-->
+    <!--<div class="swiper-slide">
+      <div class="swiper-client-msg">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="swiper-client-data grid grid-two-column">
+        <figure>
+          <img src="images/pic-1.png">
+        </figure>
+        <div class="client-data-details">
+          <p>Vinod Thapa</p>
+          <p>Enterpreneur</p>
+        </div>
+      </div>
+    </div>-->
+    <div class="swiper-slide">
+      <div class="swiper-client-msg">
+        <h4>Excellent Cheese Sandwiches</h4>
+        <p>I just got a chance to eat a grilled cheese sandwich here.The green chutney actually made a difference to the taste and the cheese combination was delightful.It is awesome.</p>
+      </div>
+      <div class="swiper-client-data grid grid-two-column">
+        <figure>
+          <img src="images/pic-4.png">
+        </figure>
+        <div class="client-data-details">
+          <p>Liza Elizabeth</p>
+          <p>Enterpreneur</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="swiper-client-msg">
+        <h4>Hotness of Hotdogs</h4>
+        <p>Hot and delicious freshly made hotdogs. The chicken hotdogs tastes fresh, juicy and tender. Different types of varieties are available in a cheap rate.They are just really awesome and tasty!!.It is yummy.</p>
+      </div>
+      <div class="swiper-client-data grid grid-two-column">
+        <figure>
+          <img src="images/pic-3.png">
+        </figure>
+        <div class="client-data-details">
+          <p>James Taylor</p>
+          <p>Enterpreneur</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="swiper-client-msg">
+        <h4>Best Burger Joint</h4>
+        <p>One of the best burger in my life.Patty stuffed inside the buns is so soft, juicy and tender and yummy. I am still thinking of the cheddar cheese and sauce.Just amazing.Try it for sure.It is awesome!</p>
+      </div>
+      <div class="swiper-client-data grid grid-two-column">
+        <figure>
+          <img src="images/pic-2.png">
+        </figure>
+        <div class="client-data-details">
+          <p>Olivia Wilson</p>
+          <p>Enterpreneur</p>
+        </div>
+      </div>
+    </div>
+    <!--<div class="swiper-slide">
+      <div class="swiper-client-msg">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="swiper-client-data grid grid-two-column">
+        <figure>
+          <img src="images/pic-1.png">
+        </figure>
+        <div class="client-data-details">
+          <p>Vinod Thapa</p>
+          <p>Enterpreneur</p>
+        </div>
+      </div>
+    </div>-->
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+</div>
+</section>
+<br>
+<hr>
+<footer class="text-gray-600 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>-->
+      <img src="images/NSEC cafeteria and canteen logo (1).jpeg">
+      <span class="ml-3 text-xl">NSEC CAFETERIA AND CANTEEN</span>
+    </a>
+    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022 NSEC CAFETERIA AND CANTEEN 
+      <!--<a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@knyttneve</a>-->
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <a href="https://www.facebook.com/nsecollegetig/" target="_blank" class="text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+        </svg>
+      </a>
+      <a href="https://twitter.com/_nsec_official_?lang=en" target="_blank" class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/netajisubhashengineeringclg/" target="_blank" class="ml-3 text-gray-500">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/school/netaji-subhash-engineering-collegewbut/" target="_blank" class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay:{
+      delay:2500,
+      disableOnInteraction:false,
+
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 2,
+        },
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+<!--<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCiUmobCg5AZwEQ9J2uR1eViH62lQMlybA",
+    authDomain: "uem-cafeteria.firebaseapp.com",
+    projectId: "uem-cafeteria",
+    storageBucket: "uem-cafeteria.appspot.com",
+    messagingSenderId: "847593905077",
+    appId: "1:847593905077:web:5aaee9119765ca6e2ad7fc",
+    measurementId: "G-21EHLK6X86"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>-->
+
+</body>
+</html>
